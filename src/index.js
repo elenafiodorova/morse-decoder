@@ -40,6 +40,7 @@ const MORSE_TABLE = {
 function decode(expr) {
     // write your solution here
     let number = 0;
+    let res = "";
     for (let i = 0; i < (expr.length / 10); i++) {
         letter = expr.slice(number, number + 10);
         number +=10;
