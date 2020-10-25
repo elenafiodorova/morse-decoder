@@ -49,15 +49,15 @@ function decode(expr) {
             continue;
         }
         let str = "";
-        for (let j = 10; j>0; j -=2) {
-            switch(letter.slice(j-2, j)) {
+        for (let j = 0; j < 11; j +=2) {
+            switch(letter.slice(j, j+2)) {
                 case "10" : str += "."; break;
                 case "11" : str += "-"; break;
                 default: break;
             }
         }
 
-        res += MORSE_TABLE[ str.split("").reverse().join("")];
+        res += MORSE_TABLE[ str.split("").join("")];
     }
   
         return res;
